@@ -127,6 +127,7 @@ function draw() {
 
   updatePixels();
   textSize(25);
-  text(totalCount, 350, 30);
+  textAlign(CENTER);
+  text(totalCount, 200, 30);
 
 }
