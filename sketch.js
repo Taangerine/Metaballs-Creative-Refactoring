@@ -1,9 +1,7 @@
 new p5();
-
 /******************
  * Blob Object Type
  *******************/
-
 var blob = function(x, y, speed) {
   this.x = x;
   this.y = y;
@@ -45,6 +43,7 @@ blob.prototype.update = function() {
 
 var Colorblob = function(x, y, speed) {
   blob.call(this, x, y, speed);
+
 }
 
 Colorblob.prototype = Object.create(blob.prototype);
@@ -58,7 +57,6 @@ Colorblob.prototype.draw = function() {
 }
 
 Colorblob.prototype.colTrue = function() {
-
   var collision;
 
   if (this.x > width || this.x < 0) {
@@ -126,8 +124,9 @@ function draw() {
   }
 
   updatePixels();
-  textSize(25);
+  textSize(15);
   textAlign(CENTER);
-  text(totalCount, 200, 30);
+  strokeWeight(0);
+  text("Collision Count: " + totalCount, 200, 30);
 
 }
